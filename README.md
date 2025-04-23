@@ -2,7 +2,7 @@
 
 ### 1. Uygulama Bilgilerini Düzenleyelim
 
-Önce `android/app/build.gradle` dosyasını açıp bilgileri kendimize göre ayarlıyoruz:
+`android/app/build.gradle` dosyasını açıp bilgileri kendimize göre ayarlıyoruz:
 
 ```gradle
 applicationId "com.seninpaketin.uygulamaadi"
@@ -11,7 +11,7 @@ versionName "1.0.0"
 minSdkVersion 21
 ```
 
-Burada `applicationId` uygulamanın kimliği, `versionCode` ve `versionName` sürüm bilgileri, `minSdkVersion` ise minimum Android sürümü. Bunları projene uygun dolduralım.
+`applicationId` uygulamanın kimliği, `versionCode` ve `versionName` sürüm bilgileri, `minSdkVersion` ise minimum Android sürümü. Bunları projeye uygun dolduralım.
 
 ### 2. Uygulamayı İmzalamak
 
