@@ -70,8 +70,4 @@ Bu, `.aab` (Android App Bundle) dosyasını oluşturur. Play Store AAB’yi terc
   - **Açıklama**: Uygulamanın ne işe yaradığını anlatan kısa ve uzun bir açıklama yazalım. Kısa açıklama 80 karakteri geçmesin, uzun açıklama ise 4000 karaktere kadar olabilir.
   - **Kategoriler ve Etiketler**: Uygulamanın kategorisini seçelim ve ilgili etiketler ekleyelim.
 
-- **İçerik Derecelendirmesi**: Sol menüden “İçerik derecelendirmesi” kısmına girelim. Burada bir anket dolduracağız. Uygulamanın içeriği (örneğin, şiddet, dil, satın alma) hakkında sorular sorulacak. Doğru cevaplayalım, bu, uygulamanın yaş sınırı için önemli.
-
-- **Uygulama Erişimi ve İzinler**: Uygulamanın herkese açık mı yoksa belirli kullanıcılarla sınırlı mı olacağını seçelim. Ayrıca, uygulamanın kullandığı izinleri (örneğin, kamera, konum) açıklayalım. Play Store, bu konuda şeffaf olmamızı istiyor.
-
 - **İncelemeye Gönderme**: Tüm bilgileri doldurduktan sonra, sağ üstteki “İncelemeye gönder” butonuna basalım. Önce bir özet ekranı çıkacak, her şeyin doğru olduğundan emin olalım. Eğer eksik bir şey varsa, sistem bize söyleyecek. Sonra “Üretime gönder” deyip beklemeye başlayalım.
