@@ -1,0 +1,9 @@
+{
+  "name": "EruBS434AssignedProject",
+  "short_name": "EruBS434AssignedProject",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1976d2",
+  "description": "A simple Flutter project with Navigator usage."
+}
