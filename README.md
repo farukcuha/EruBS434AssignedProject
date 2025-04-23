@@ -57,19 +57,18 @@ Bu, `.aab` (Android App Bundle) dosyasını oluşturur. Play Store AAB’yi terc
 
 ### 4. Google Play Console’a Gidelim (Detaylı)
 
-Şimdi uygulamamızı Play Store’a yüklemek için Google Play Console’a girelim. Adres şu: https://play.google.com/console. Eğer hesabın yoksa, bir Google hesabı ile kaydolman gerekiyor. Tek seferlik bir kayıt ücreti var, bunu ödeyip hesabını aktif edelim. Şimdi adım adım neler yapacağız, bakalım:
+Şimdi uygulamamızı Play Store’a yüklemek için Google Play Console’a girelim. Adres şu: https://play.google.com/console. Tek seferlik bir kayıt ücreti var, bunu ödeyip hesabını aktif edelim.
 
-- **Yeni Uygulama Oluşturma**: Console’da sol menüden “Tüm uygulamalar”a tıklayıp “Uygulama oluştur” butonuna basalım. Uygulamanın adını girelim (bu, Play Store’da görünecek isim). Dil seçimi ve uygulama türünü (örneğin, uygulama mı oyun mu) belirleyelim. Ücretli mi ücretsiz mi olacağına da burada karar verelim.
+- **Yeni Uygulama Oluşturma**: Console’da sol menüden “Tüm uygulamalar”a tıklayıp “Uygulama oluştur” butonuna basalım. Uygulamanın adını girelim. Dil seçimi ve uygulama türünü belirleyelim. Ücretli mi ücretsiz mi olacağına da burada karar verelim.
 
-- **AAB Dosyasını Yükleme**: Uygulama oluşturulduktan sonra, sol menüden “Üretim” sekmesine gidelim. Burada “Sürüm oluştur” butonuna tıklayıp “Uygulama paketi” seçeneğini seçelim. Daha önce oluşturduğumuz `.aab` dosyasını buraya sürükleyip bırakalım veya dosya seçerek yükleyelim. Yükleme tamamlanınca sürüm notlarını ekleyelim (örneğin, “İlk sürüm, temel özellikler eklendi” gibi kısa bir açıklama).
+- **AAB Dosyasını Yükleme**: Uygulama oluşturulduktan sonra, sol menüden “Üretim” sekmesine gidelim. Burada “Sürüm oluştur” butonuna tıklayıp “Uygulama paketi” seçeneğini seçelim. Daha önce oluşturduğumuz `.aab` dosyasını buraya sürükleyip bırakalım veya dosya seçerek yükleyelim. Yükleme tamamlanınca sürüm notlarını ekleyelim.
 
 - **Mağaza Sayfasını Düzenleme**: Sol menüden “Mağaza varlığı” kısmına gidelim. Burada şunları yapalım:
 
-  - **Uygulama İkonu**: 512x512 piksel boyutunda bir PNG dosyası yükleyelim. İkon net ve dikkat çekici olsun.
-  - **Ekran Görüntüleri**: Uygulamanın nasıl göründüğünü gösteren en az 2, en fazla 8 ekran görüntüsü ekleyelim. Telefon, tablet veya diğer cihazlar için ayrı görüntüler yükleyebiliriz. 1080x1920 gibi yüksek çözünürlüklü resimler ideal.
-  - **Açıklama**: Uygulamanın ne işe yaradığını anlatan kısa ve uzun bir açıklama yazalım. Kısa açıklama 80 karakteri geçmesin, uzun açıklama ise 4000 karaktere kadar olabilir. Kullanıcıyı çekecek, sade bir dil kullanalım.
-  - **Kategoriler ve Etiketler**: Uygulamanın kategorisini (örneğin, Eğitim, Yaşam Tarzı) seçelim ve ilgili etiketler ekleyelim.
-  - **Gizlilik Politikası**: Eğer uygulaman veri topluyorsa, bir gizlilik politikası bağlantısı eklememiz lazım. Basit bir gizlilik politikası oluşturup bir web sitesine yükleyebiliriz (örneğin, Google Sites kullanarak).
+  - **Uygulama İkonu**: 512x512 piksel boyutunda bir PNG dosyası yükleyelim.
+  - **Ekran Görüntüleri**: Uygulamanın nasıl göründüğünü gösteren en az 2, en fazla 8 ekran görüntüsü ekleyelim.
+  - **Açıklama**: Uygulamanın ne işe yaradığını anlatan kısa ve uzun bir açıklama yazalım. Kısa açıklama 80 karakteri geçmesin, uzun açıklama ise 4000 karaktere kadar olabilir.
+  - **Kategoriler ve Etiketler**: Uygulamanın kategorisini seçelim ve ilgili etiketler ekleyelim.
 
 - **İçerik Derecelendirmesi**: Sol menüden “İçerik derecelendirmesi” kısmına girelim. Burada bir anket dolduracağız. Uygulamanın içeriği (örneğin, şiddet, dil, satın alma) hakkında sorular sorulacak. Doğru cevaplayalım, bu, uygulamanın yaş sınırı için önemli.
 
