@@ -1,7 +1,4 @@
-Proje : Flutter Navigation ile Sayfa Geçişi : Erciyes Üniversitesi Fakülte : Mühendislik Fakültesi Bölüm : Bilgisayar Mühendisliği Ders : Mobile Application Development Dersi Veren : Dr. Öğr. Üyesi. [Fehim KÖYLÜ] Öğrenci : Ahmet Faruk Çuha Öğrenci No : 1030510500 Tarih : 30.04.2025
-
-Resources
-
+# Proje : Flutter Navigation ile Sayfa Geçişi : Erciyes Üniversitesi Fakülte : Mühendislik Fakültesi Bölüm : Bilgisayar Mühendisliği Ders : Mobile Application Development Dersi Veren : Dr. Öğr. Üyesi. [Fehim KÖYLÜ] Öğrenci : Ahmet Faruk Çuha Öğrenci No : 1030510500 Tarih : 30.04.2025
 
 # Flutter Uygulamayı Play Store'da Yayınlama
 
