@@ -1,5 +1,4 @@
-# **Uygulama Raporu**  
-Flutter Navigation ile Sayfa Geçişi
+# **Flutter Navigation ile Sayfa Geçişi**  
 
 Erciyes Üniversitesi
 
