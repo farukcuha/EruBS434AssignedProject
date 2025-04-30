@@ -1,4 +1,22 @@
 # **Uygulama Raporu**  
+Flutter Navigation ile Sayfa Geçişi
+
+Erciyes Üniversitesi
+
+Mühendislik Fakültesi
+
+Bilgisayar Mühendisliği
+
+Mobile Application Development Dersi
+
+Dr. Öğr. Üyesi. [Fehim KÖYLÜ] 
+
+Öğrenci: Ahmet Faruk Çuha 
+
+Öğrenci No : 1030510500 
+
+Tarih : 30.04.2025
+
 ## **1. Proje Amacı**
 
 Bu proje, Flutter kullanılarak iki ekranlı basit bir mobil uygulama geliştirme örneğidir. Kullanıcı, birinci ekranda yer alan bir butona tıkladığında ikinci ekrana yönlendirilir. Amaç, Flutter'da sayfa geçişlerinin (`Navigator`) nasıl yapıldığını ve `StatelessWidget` bileşenlerinin kullanımını göstermektir.
