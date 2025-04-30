@@ -1,75 +1,119 @@
-# Proje : Flutter Navigation ile Sayfa Geçişi : Erciyes Üniversitesi Fakülte : Mühendislik Fakültesi Bölüm : Bilgisayar Mühendisliği Ders : Mobile Application Development Dersi Veren : Dr. Öğr. Üyesi. [Fehim KÖYLÜ] Öğrenci : Ahmet Faruk Çuha Öğrenci No : 1030510500 Tarih : 30.04.2025
+# **Uygulama Raporu**  
+## **1. Proje Amacı**
 
-# Flutter Uygulamayı Play Store'da Yayınlama
+Bu proje, Flutter kullanılarak iki ekranlı basit bir mobil uygulama geliştirme örneğidir. Kullanıcı, birinci ekranda yer alan bir butona tıkladığında ikinci ekrana yönlendirilir. Amaç, Flutter'da sayfa geçişlerinin (`Navigator`) nasıl yapıldığını ve `StatelessWidget` bileşenlerinin kullanımını göstermektir.
 
-### 1. Uygulama Bilgilerini Düzenleyelim
+## **2. Kullanılan Teknolojiler**
 
-`android/app/build.gradle` dosyasını açıp bilgileri kendimize göre ayarlıyoruz:
+- **Flutter SDK**
+- **Dart dili**
+- **Material Design bileşenleri**
 
-```gradle
-applicationId "com.seninpaketin.uygulamaadi"
-versionCode 1
-versionName "1.0.0"
-minSdkVersion 21
-```
+## **3. Ana Bileşenler ve Açıklamaları**
 
-`applicationId` uygulamanın kimliği, `versionCode` ve `versionName` sürüm bilgileri, `minSdkVersion` ise minimum Android sürümü. Bunları projeye uygun dolduralım.
+### 3.1 `main()` Fonksiyonu
 
-### 2. Uygulamayı İmzalamak
+Uygulamanın giriş noktasıdır. `runApp()` fonksiyonu ile `MyApp` widget'ı çalıştırılır.
 
-Play Store için uygulamayı imzalamamız gerekiyor. Terminalde şu komutu çalıştıralım:
-
-```bash
-keytool -genkey -v -keystore key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
-```
-
-Bu, `key.jks` adında bir imza dosyası oluşturur. Sorulan bilgileri dikkatlice girelim. Sonra `android` klasörüne `key.properties` dosyası oluşturup şunları yazalım:
-
-```properties
-storePassword=seninsifren
-keyPassword=seninsifren
-keyAlias=key
-storeFile=key.jks
-```
-
-Ardından `android/app/build.gradle` dosyasına imza ayarlarını ekleyelim:
-
-```gradle
-signingConfigs {
-    release {
-        keyAlias keystoreProperties['keyAlias']
-        keyPassword keystoreProperties['keyPassword']
-        storeFile file(keystoreProperties['storeFile'])
-        storePassword keystoreProperties['storePassword']
-    }
+```dart
+void main() {
+  runApp(const MyApp());
 }
 ```
 
-Böylece imza işi tamam, devam edelim.
+### 3.2 `MyApp` Sınıfı
 
-### 3. Yayın Paketini Hazırlayalım
+Uygulamanın ana yapı taşıdır. `MaterialApp` bileşenini içerir ve tema ile ana ekran tanımlanır.
 
-Uygulamamızı paketlemek için terminalde şu komutu çalıştıralım:
+```dart
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-```bash
-flutter build appbundle
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'EruBS434AssignedProject',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const FirstScreen(),
+    );
+  }
+}
 ```
 
-Bu, `.aab` (Android App Bundle) dosyasını oluşturur. Play Store AAB’yi tercih ettiği için bunu kullanalım.
+- `MaterialApp`: Uygulamanın tüm yapı taşlarını barındırır.
+- `theme`: Uygulama temasını belirler.
+- `home`: Başlangıçta gösterilecek ekran.
 
-### 4. Google Play Console’a Gidelim (Detaylı)
+---
 
-Şimdi uygulamamızı Play Store’a yüklemek için Google Play Console’a girelim. Adres şu: https://play.google.com/console. Tek seferlik bir kayıt ücreti var, bunu ödeyip hesabını aktif edelim.
+### 3.3 `FirstScreen` Sınıfı
 
-- **Yeni Uygulama Oluşturma**: Console’da sol menüden “Tüm uygulamalar”a tıklayıp “Uygulama oluştur” butonuna basalım. Uygulamanın adını girelim. Dil seçimi ve uygulama türünü belirleyelim. Ücretli mi ücretsiz mi olacağına da burada karar verelim.
+İlk ekranda, kullanıcıya bir buton sunulmakta ve bu butona basıldığında ikinci ekrana yönlendirme yapılmaktadır.
 
-- **AAB Dosyasını Yükleme**: Uygulama oluşturulduktan sonra, sol menüden “Üretim” sekmesine gidelim. Burada “Sürüm oluştur” butonuna tıklayıp “Uygulama paketi” seçeneğini seçelim. Daha önce oluşturduğumuz `.aab` dosyasını buraya sürükleyip bırakalım veya dosya seçerek yükleyelim. Yükleme tamamlanınca sürüm notlarını ekleyelim.
+```dart
+class FirstScreen extends StatelessWidget {
+  const FirstScreen({super.key});
 
-- **Mağaza Sayfasını Düzenleme**: Sol menüden “Mağaza varlığı” kısmına gidelim. Burada şunları yapalım:
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('İlk Ekran'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SecondScreen()),
+            );
+          },
+          child: const Text('İkinci Ekrana Git'),
+        ),
+      ),
+    );
+  }
+}
+```
 
-  - **Uygulama İkonu**: 512x512 piksel boyutunda bir PNG dosyası yükleyelim.
-  - **Ekran Görüntüleri**: Uygulamanın nasıl göründüğünü gösteren en az 2, en fazla 8 ekran görüntüsü ekleyelim.
-  - **Açıklama**: Uygulamanın ne işe yaradığını anlatan kısa ve uzun bir açıklama yazalım. Kısa açıklama 80 karakteri geçmesin, uzun açıklama ise 4000 karaktere kadar olabilir.
-  - **Kategoriler ve Etiketler**: Uygulamanın kategorisini seçelim ve ilgili etiketler ekleyelim.
+- `Scaffold`: Sayfanın temel yapısını oluşturur.
+- `AppBar`: Sayfa başlığını gösterir.
+- `ElevatedButton`: Tıklanabilir buton.
+- `Navigator.push(...)`: Sayfalar arası geçişi sağlar.
 
-- **İncelemeye Gönderme**: Tüm bilgileri doldurduktan sonra, sağ üstteki “İncelemeye gönder” butonuna basalım. Önce bir özet ekranı çıkacak, her şeyin doğru olduğundan emin olalım. Eğer eksik bir şey varsa, sistem bize söyleyecek. Sonra “Üretime gönder” deyip beklemeye başlayalım.
+---
+
+### 3.4 `SecondScreen` Sınıfı
+
+İkinci ekranda sadece bir `Text` widget'ı bulunmaktadır.
+
+```dart
+class SecondScreen extends StatelessWidget {
+  const SecondScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('İkinci Ekran'),
+      ),
+      body: const Center(
+        child: Text('Bu ikinci ekran!'),
+      ),
+    );
+  }
+}
+```
+
+Bu ekran yalnızca bir bilgi ekranıdır. Geri gitmek için Android'de sistemdeki “geri” butonu yeterlidir.
+
+---
+
+## **4. Uygulama Akışı**
+
+1. Uygulama başlatılır, `FirstScreen` görüntülenir.
+2. Kullanıcı "İkinci Ekrana Git" butonuna basar.
+3. `SecondScreen` açılır.
+4. Kullanıcı geri düğmesine bastığında `FirstScreen`’e döner.
